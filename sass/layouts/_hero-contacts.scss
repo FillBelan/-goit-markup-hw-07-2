@@ -12,6 +12,11 @@
     &:focus {
         color: var(--accent-text-color)
     }
+          &:hover .contacts-icon-svg,
+          &:focus .contacts-icon-svg {
+              fill: var(--accent-text-color);
+          }
+          
 }
 
 .contacts-list {
@@ -20,12 +25,13 @@
     gap: 50px;
 }
 
-.contacts-icon-svg:hover,
-.contacts-icon-svg:focus {
-    fill: var(--accent-text-color);
 
-    & {
-        margin-right: 10px;
-        transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+.contacts-icon-svg {
+    margin-right: 10px;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+        fill: var(--accent-text-color);
     }
 }
