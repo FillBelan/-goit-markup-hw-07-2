@@ -81,20 +81,7 @@ body {
 .header {
   border-bottom: 1px solid #ECECEC;
 }
-.header-nav {
-  display: flex;
-}
-.header-logo {
-  color: var(--title-text-color);
-  font-family: "Raleway";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1, 19;
-  letter-spacing: 0.03em;
-  margin-right: 93px;
-}
-.header-link {
+.header .navigation__link {
   color: var(--title-text-color);
   font-style: "Roboto";
   font-weight: 500;
@@ -104,7 +91,7 @@ body {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
 }
-.header-link::after {
+.header .navigation__link::after {
   content: "";
   position: absolute;
   width: 100%;
@@ -115,7 +102,7 @@ body {
   display: block;
   opacity: 0;
 }
-.header-link.current::after {
+.header .navigation__link.current::after {
   content: "";
   position: absolute;
   width: 100%;
@@ -126,13 +113,29 @@ body {
   display: block;
   opacity: 1;
 }
-.header-link:hover::after {
+.header .navigation__link:hover::after {
   opacity: 1;
 }
-.header-link:hover, .header-link:focus {
+.header .navigation__link:hover, .header .navigation__link:focus {
   color: var(--accent-text-color);
 }
-.header-list {
+
+.navigation {
+  display: flex;
+}
+
+.navigation__logo {
+  color: var(--title-text-color);
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1, 19;
+  letter-spacing: 0.03em;
+  margin-right: 93px;
+}
+
+.navigation__list {
   display: flex;
   align-items: center;
   gap: 50px;
@@ -242,10 +245,16 @@ body {
   letter-spacing: 0.03em;
 }
 
+.working {
+  padding-bottom: 94px;
+}
 .working-anim {
   position: relative;
 }
-
+.working-list {
+  display: flex;
+  justify-content: space-between;
+}
 .working-item-text {
   display: flex;
   align-items: center;
@@ -265,18 +274,8 @@ body {
   background-color: rgba(47, 48, 58, 0.8);
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
 .working-item-text:hover {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-
-.working {
-  padding-bottom: 94px;
-}
-
-.working-list {
-  display: flex;
-  justify-content: space-between;
 }
 
 .team {
